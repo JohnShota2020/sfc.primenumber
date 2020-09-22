@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Prime Number</title>
+    <link rel="stylesheet" href="css/primenumber.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  </head>
+  <body>
+
+   
+      <p>1〜100までの素数を出力する</p>
+    
+    <input type="button" value="表示" id="button">
+    
+
+    <script>
+
+      function primeNumber(prime) {
+    if (prime == 1) { 
+      return false; 
+    }
+    
+    for(let i = 2; i < prime; i++) {
+      if (prime % i == 0) {
+         return false;
+         }
+    }
+    return true;
+  };
+
+  const button = document.getElementById('button');
+
+  button.addEventListener('click', function() {
+    for (var i=1; i<100; i++) {
+      if (primeNumber(i)) {
+        document.write(i + '\n');
+      }
+    }
+  });
+    
+    </script>
+    
+  </body>
+</html>
